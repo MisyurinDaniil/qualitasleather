@@ -1,0 +1,862 @@
+@import url("font-awesome-4.7.0/css/font-awesome.min.css");
+@font-face{
+    font-family: 'Raleway';
+    src: url('fonts/Raleway-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Raleway1';
+    src: url('fonts/Raleway-BoldItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face{
+    font-family: 'Myriad Pro';
+    src: url('fonts/MyriadPro-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Roboto black';
+    src: url('fonts/Roboto-black.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.conteiner {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.main-button-design {
+    width: 130px;
+    height: 48px;
+    background-color: #fb4d01;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+.main-button-design:hover {
+    background-color: #ffd700;
+    color: #000000;
+}
+.main-h1-design {
+    padding-bottom: 33px;
+    padding-left: 27px;
+    padding-top: 30px;
+    color: #707070;
+    font-family: "Myriad Pro";
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;   
+}
+/***********************
+*********Header********
+************************/
+
+.header-index {
+    height: 700px;
+    background-color: #abeafa;
+}
+.header-all-page {
+    height: 350px;
+    background-image: url(img/header-5.jpg);
+}
+.header-top{
+    overflow: hidden;
+}
+.header-top .logo {
+    background: url(img/logo.png) no-repeat 50% 50%;
+    width: 125px;
+    height: 125px;
+    margin-left: 93px;
+    margin-top: 24px;
+    float: left;
+}
+.header-top .header-social-network {
+    margin-left: 1000px;
+    margin-top: 49px;
+}
+.header-top .header-social-network a {
+    display: block;
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-left: 10px;
+}
+.header-top .header-social-network a:first-child {
+    margin-left: 0;
+}
+.header-social-network .header-facebook {
+    background: url(img/facebook_icon.png) no-repeat 50% 50%;
+}
+.header-social-network .header-twitter {
+    background: url(img/twitter_icon.png) no-repeat 50% 50%;  
+}
+.header-social-network .header-youtube {
+    background: url(img/youtube_icon.png) no-repeat 50% 50%;
+}
+.header-social-network .header-pinterest {
+    background: url(img/pinterest_icon.png) no-repeat 50% 50%;   
+}
+.header-social-network .header-instagramm {
+    background: url(img/insta_icon.png) no-repeat 50% 50%;
+}
+.header-all-page .header-title {
+    color: #fff;
+    width: 800px;
+    height: 100px;
+    margin-left: 323px;
+    margin-top: 33px;
+    line-height: 100px;
+    font-family: "Myriad Pro";
+    font-weight: 400;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+/*
+
+Style for big header
+
+.header-bot {
+    overflow: hidden;
+}
+.header-bot > div {
+    float: left;
+}
+.header-bot .welcom {
+    width: 270px;
+    height: 300px;
+    background-color: #fff51f;
+    margin-top: 201px;
+    margin-left: 165px;
+}
+.header-bot .welcom p:first-child {
+    font-family: 'Raleway', sans-serif;
+    color: #333333;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-top: 82px;
+    margin-left: 25px;
+}
+.header-bot .welcom p:last-child {
+    font-family: 'Raleway', sans-serif;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 14px;
+    margin-top: 24px;
+    margin-left: 22px;
+}
+.header-bot .buy-now {
+    width: 300px;
+    margin-left: 378px;
+    margin-top: 109px;
+}
+.header-bot .buy-now p:first-child {
+    color: #fff51f;
+    font-family: "Myriad Pro";
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 34px;
+    text-transform: uppercase;
+}
+.header-bot .buy-now p:nth-child(2) {
+    color: #fff51f;
+    font-family: "Myriad Pro";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.header-bot .buy-now button{
+    width: 124px;
+    height: 49px;
+    background-color: #fff51f;
+    color: #000000;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 87px;
+    margin-left: 3px;
+    border: 0;
+}
+.header-bot .buy-now button:hover {
+    background-color: #333333;
+    color: #fff51f;
+    cursor: pointer;
+    margin-top: 89px;
+    margin-left: 5px;
+}*/
+/***********************
+** Navigation (menu) **
+************************/
+.nav {
+    /*margin-top: -20px;
+    margin-left: 15px;
+    */
+    float: left;
+}
+.nav .menu > p {
+    width: 270px;
+    height: 66px;
+    background-color: #333333;
+    color: #ffffff;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 66px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.nav .menu ul {
+    width: 270px;
+    background-color: #e0e0e0;
+}
+.nav .menu ul li {
+    list-style: none;
+}
+.nav .menu ul li a {
+    display: block;
+    padding-left: 40px;
+    text-decoration: none;
+    color: #000000;
+    font-family: "Roboto black";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+.nav .menu ul li a:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+.nav .now-open {
+    width: 270px;
+    height: 299px;
+    background-color: #e0e0e0;
+    margin-top: 30px;
+    border-top: 1px solid transparent;
+    margin-bottom: 30px;
+}
+.nav .now-open p {
+    width: 94px;
+    height: 97px;
+    color: #333333;
+    font-family: "Myriad Pro";
+    font-size: 36px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-top: 129px;
+    margin-left: 142px;
+}
+/***********************
+** Products grid block **
+************************/
+.content {
+    width: 870px;
+    float: left;
+    margin-left: 30px;
+    /*margin-top: -20px;*/
+    margin-bottom: 30px;
+    background-color: #f8f8f8;
+}
+.content .goods-block {
+    margin-top: 20px;
+}
+.content .goods-block:first-child {
+    margin-top: 0;
+}
+.content section ul li {
+    width: 270px;
+    height: 340px;
+    background-color: #ffffff;
+    list-style: none;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.content .goods-block li a {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    padding: 10px;
+}
+.content .goods-block ul li:hover {
+    box-shadow: 0 0 15px 5px #959595;
+}
+/*rgba(221, 221, 221, 1);*/
+.content .goods-block ul li:first-child {
+    margin-left: 0;
+}
+.content .goods-block ul li:nth-child(3n+4) {
+    margin-left: 0;
+}
+/*
+.content .goods-block h1 {
+    padding-bottom: 33px;
+    padding-left: 27px;
+    padding-top: 30px;
+    color: #707070;
+    font-family: "Myriad Pro";
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;   
+}*/
+.content .goods-block .goods-title {
+    width: 130px;
+    margin-left: 26px;
+    margin-top: 25px;
+}
+.content .goods-block .goods-title {
+    color: #333333;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.content .goods-block .goods-price {
+    color: #333333;
+    font-family: "Myriad Pro";
+    font-size: 18px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 40px;
+    right: 23px;
+}
+.content .goods-block .goods-sale-price {
+    color: #e24602;
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: line-through;
+    position: absolute;
+    bottom: 20px;
+    right: 22px;
+}
+.content .goods-block .triangle-field-new {
+    width: 0;
+    height: 0;
+    border: 24px solid transparent; 
+    border-top: 24px solid #e24602;
+    border-right: 24px solid #e24602;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.content .goods-block .triangle-text-new {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 9px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    right: 6px;
+}
+.content .goods-block .triangle-field-hot {
+    width: 0;
+    height: 0;
+    border: 24px solid transparent; 
+    border-top: 24px solid #faef03;
+    border-right: 24px solid #faef03;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.content .goods-block .triangle-text-hot {
+    color: #000000;
+    font-family: Roboto;
+    font-size: 9px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    right: 6px;
+}
+
+/*****************************
+*******   brands   ********
+*****************************/
+
+.brands {
+    width: 1170px;
+    height: 160px;
+    background-color: #ffffff;
+    background-image: url(img/brands.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    clear: left;
+    margin: 0 auto;
+}
+
+
+/*****************************
+*** Social network bottom *****
+*****************************/
+
+.social-network-bottom {
+    width: 1200px;
+    background-color: #eaeaea;
+    clear: left;
+}
+.social-network-bottom > p {
+    height: 30px;
+    color: #333333;
+    font-family: "Myriad Pro";
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.social-network-bottom > p span:last-child {
+    font-size: 18px;
+}
+.social-network-bottom > p span:first-child {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 37px;  
+    background: url(img/insta_icon_medium.png) 0% 50% no-repeat;
+}
+.social-network-bottom .img-line {
+    font-size: 0px;
+    padding-bottom: 60px;
+}
+.social-network-bottom .img-line img {
+    margin-right: 12px;
+}
+.social-network-bottom .img-line img:last-child {
+    margin-right: 0;
+}
+.social-network-bottom ul li {
+    width: 400px;
+    height: 150px;
+    list-style: none;
+    float: left;
+}
+.social-network-bottom ul li a {
+    display: block;
+    width: 100%;
+    height: 150px;
+    font-size: 65px;
+    color: white;
+    line-height: 150px;
+    text-align: center;
+}
+.social-network-bottom ul li:hover {
+    opacity: 0.5;
+}
+.social-network-bottom .vk-large {
+    background-color: #3b5997;
+}
+.social-network-bottom .instagram-large {
+    background-color: #c13584;
+}
+.social-network-bottom .odnoklassniki-large {
+    background-color: #ee8208;
+}
+
+
+/*****************************
+************ Footer ***********
+*****************************/
+
+.footer {
+    border-top: 1px solid transparent;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #373737;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 12px;
+}
+.footer .top-part-footer{
+    overflow: hidden;
+    margin-top: 35px;
+    padding-bottom: 20px;
+}
+.footer .top-part-footer > section {
+    float: left;
+}
+.footer .top-part-footer h3 {
+    font-family: "Myriad Pro";
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 28px;
+}
+.footer ul li {
+    list-style: none;
+}
+.footer ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+.footer .footer-category {
+    width: 100px;
+    margin-left: 35px;
+}
+.footer .footer-account {
+    width: 130px;
+    margin-left: 90px;
+}
+.footer .footer-support {
+    width: 110px;
+    margin-left: 70px;
+}
+.footer .footer-newletter {
+    width: 270px;
+    margin-left: 80px;
+}
+.footer .footer-abbout-us {
+    width: 250px;
+    margin-left: 46px;
+}
+.footer .footer-newletter input {
+    width: 138px;
+    height: 30px;
+    background-color: #fff51f;
+    border: none;
+    margin-top: 20px;
+    padding-left: 21px;
+    padding-right: 21px;
+    color: #333333;
+    font-family: "Myriad Pro";
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    float: left;
+}
+.footer .footer-newletter button {
+    width: 71px;
+    height: 30px;
+    background-color: #000000;
+    border: none;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.footer .footer-newletter button:hover {
+    margin-top: 22px;
+    margin-left: 2px;
+    color: #fff51f;
+}
+.footer .bot-part-footer {
+    height: 50px;
+    background-color: #333333;
+}
+.footer .bot-part-footer p {
+    display: inline-block;
+    color: #dad9d9;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 50px;
+    margin-left: 170px;
+    float: left;
+}
+.footer .bot-part-footer .footer-social-network {
+    margin-left: 450px;
+    margin-top: 17px;
+    float: left;
+}
+.footer .bot-part-footer a {
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-left: 15px;
+}
+.footer .bot-part-footer a:first-child {
+    margin-left: 0px;
+}
+.footer .bot-part-footer .footer-facebook {
+    background: url(img/facebook_icon.png) no-repeat 50% 50%;
+}
+.footer .bot-part-footer .footer-twitter {
+    background: url(img/twitter_icon.png) no-repeat 50% 50%; 
+}
+.footer .bot-part-footer .footer-pinterest {
+     background: url(img/pinterest_icon.png) no-repeat 50% 50%;   
+}
+.footer .bot-part-footer .footer-youtub {
+     background: url(img/youtube_icon.png) no-repeat 50% 50%;;
+}
+.footer .bot-part-footer .footer-instagramm {
+     background: url(img/insta_icon.png) no-repeat 50% 50%;
+}
+
+/***********************
+*** Product alone page ***
+**************************/
+
+.breadcrumbs {
+    margin-top: 38px;
+    margin-bottom: 53px;
+    margin-left: 12px;
+    overflow: hidden;
+}
+.breadcrumbs ul li {
+    list-style: none;
+    color: #989898;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    float: left;
+}
+.breadcrumbs ul li {
+    list-style: none;
+    float: left;
+}
+.breadcrumbs ul li::after {
+    content: "  >>  ";
+    white-space: pre;
+    display: inline;
+    color: #989898;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+}
+.breadcrumbs ul li:last-child::after {
+    content: "";
+    display: inline;
+}
+.breadcrumbs ul li a {
+    text-decoration: none;
+    color: #989898;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+}
+.breadcrumbs ul li:hover a{
+    text-decoration: underline;
+}
+.breadcrumbs ul li:hover{
+    text-decoration: underline;
+    background-color: yellow;
+}
+.product-block {
+    margin-left: 8px;
+}
+.product-block .product-pictures {
+    width: 374px;
+    font-size: 0;
+}
+.product-block .product-pictures img:nth-child(2) {
+    margin-left: 50px;
+}
+.product-block .product-pictures .product-picture-small {
+    margin-top: 24px;
+    margin-left: 30px;
+}
+.product-block .product-pictures {
+    float: left;
+}
+.product-block .product-description {
+    float: right;
+}
+.product-block .product-description {
+    width: 442px;
+    margin-left: 46px;
+}
+.product-block .product-description h1{
+    color: #353535;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.product-block .product-description .product-price{
+    color: #111111;
+    font-family: "Roboto - Medium Italic";
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 21.01px;
+    margin-top: 53px;
+    margin-bottom: 27px;
+}
+.product-block .product-description hr {
+    width: 390px;
+    height: 1px;
+    background-color: #333333;
+    opacity: 0.1;
+    margin-left: 30px;
+}
+.product-block .short-description{
+    color: #707070;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-top: 24px;
+    margin-bottom: 18px;
+}
+.product-block .short-description span {
+    display: block;
+    color: #353535;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.product-block .product-description button {
+    margin-left: 126px;
+    margin-top: 20px;
+}
+.product-block .product-full-description {
+    margin-top: 42px;
+}
+
+.product-block .product-full-description span{
+    display: block;
+    width: 160px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin-left: 19px;
+    background-color: #e0e0e0;
+    color: #333333;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.product-block .product-full-description p{
+    border: 1px solid #d6d4d4;
+    padding: 15px;
+    color: #808080;
+    font-family: Verdana;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: justify;
+}
+
+/***********************
+*** Contacts page ***
+**************************/
+.form-feedback {
+    margin-left: 11px;
+    width: 350px;
+    margin-right: 23px;
+    float: left;
+}
+.form-feedback label {
+    display: block;
+    color: #333333;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+.form-feedback input {
+    width: 316px;
+    height: 30px;
+    border: 1px solid #efefef;
+    background-color: #ffffff;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.form-feedback textarea {
+    width: 316px;
+    height: 150px;
+    border: 1px solid #efefef;
+    background-color: #ffffff;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    padding: 16px; 
+}
+.form-feedback .main-button-design {
+    margin-top: 30px;
+}
+.our-contacts {
+    width: 356px;
+    height: 500px;
+    float: left;
+    padding-left: 28px;
+    color: #333333;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+}
+.our-contacts p {
+    margin-top: 12px;
+}
+.our-contacts > p:last-child{
+    margin-top: 25px;
+}
+.our-contacts .communication-method {
+    color: #333333;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+}
+.our-contacts .communication-method a{
+    text-decoration: none;
+    color: #333333;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+}
+.our-contacts .communication-method a:hover{
+    text-decoration: underline;
+}
+.our-contacts .communication-method .fw {
+    width: 40px;
+}
+.our-contacts .communication-method i, span {
+    vertical-align: middle;
+}
+.our-contacts .communication-method span{
+
+}

@@ -1,31 +1,31 @@
-@import url("font-awesome-4.7.0/css/font-awesome.min.css");
+@import url("../font-awesome-4.7.0/css/font-awesome.min.css");
 @font-face{
     font-family: 'Raleway';
-    src: url('fonts/Raleway-Bold.ttf');
+    src: url('../fonts/Raleway-Bold.ttf');
     font-weight: bold;
     font-style: normal;
 }
 @font-face{
     font-family: 'Raleway1';
-    src: url('fonts/Raleway-BoldItalic.ttf');
+    src: url('../fonts/Raleway-BoldItalic.ttf');
     font-weight: bold;
     font-style: italic;
 }
 @font-face{
     font-family: 'Myriad Pro';
-    src: url('fonts/MyriadPro-Regular.ttf');
+    src: url('../fonts/MyriadPro-Regular.ttf');
     font-weight: 400;
     font-style: normal;
 }
 @font-face{
     font-family: 'Roboto black';
-    src: url('fonts/Roboto-black.ttf');
+    src: url('../fonts/Roboto-black.ttf');
     font-weight: 400;
     font-style: normal;
 }
 @font-face{
     font-family: 'Roboto';
-    src: url('fonts/Roboto-Regular.ttf');
+    src: url('../fonts/Roboto-Regular.ttf');
     font-weight: 400;
     font-style: normal;
 }
@@ -81,13 +81,14 @@
 }
 .header-all-page {
     height: 350px;
-    background-image: url(img/header-5.jpg);
+    background-image: url(../img/header-5.jpg);
 }
 .header-top{
     overflow: hidden;
+    position: relative;
 }
 .header-top .logo {
-    background: url(img/logo.png) no-repeat 50% 50%;
+    background: url(../img/logo.png) no-repeat 50% 50%;
     width: 125px;
     height: 125px;
     margin-left: 93px;
@@ -109,19 +110,19 @@
     margin-left: 0;
 }
 .header-social-network .header-facebook {
-    background: url(img/facebook_icon.png) no-repeat 50% 50%;
+    background: url(../img/facebook_icon.png) no-repeat 50% 50%;
 }
 .header-social-network .header-twitter {
-    background: url(img/twitter_icon.png) no-repeat 50% 50%;  
+    background: url(../img/twitter_icon.png) no-repeat 50% 50%;  
 }
 .header-social-network .header-youtube {
-    background: url(img/youtube_icon.png) no-repeat 50% 50%;
+    background: url(../img/youtube_icon.png) no-repeat 50% 50%;
 }
 .header-social-network .header-pinterest {
-    background: url(img/pinterest_icon.png) no-repeat 50% 50%;   
+    background: url(../img/pinterest_icon.png) no-repeat 50% 50%;   
 }
 .header-social-network .header-instagramm {
-    background: url(img/insta_icon.png) no-repeat 50% 50%;
+    background: url(../img/insta_icon.png) no-repeat 50% 50%;
 }
 .header-all-page .header-title {
     color: #fff;
@@ -135,7 +136,25 @@
     font-size: 48px;
     text-transform: uppercase;
 }
-
+.header-our-contact {
+    display: block;
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 86px;
+    top: 27px;
+    color: #fff;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-family: "Myriad Pro";
+    font-weight: 700;
+    text-align: center;
+}
+.header-our-contact:hover {
+    color: #000;
+    background-color: #f8f8f8;
+}
 /*
 
 Style for big header
@@ -411,7 +430,7 @@ Style for big header
     width: 1170px;
     height: 160px;
     background-color: #ffffff;
-    background-image: url(img/brands.png);
+    background-image: url(../img/brands.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     clear: left;
@@ -446,7 +465,7 @@ Style for big header
     height: 30px;
     line-height: 30px;
     padding-left: 37px;  
-    background: url(img/insta_icon_medium.png) 0% 50% no-repeat;
+    background: url(../img/insta_icon_medium.png) 0% 50% no-repeat;
 }
 .social-network-bottom .img-line {
     font-size: 0px;
@@ -584,6 +603,7 @@ Style for big header
 .footer .bot-part-footer {
     height: 50px;
     background-color: #333333;
+    position: relative;
 }
 .footer .bot-part-footer p {
     display: inline-block;
@@ -592,14 +612,14 @@ Style for big header
     font-size: 12px;
     font-weight: 400;
     line-height: 50px;
-    margin-left: 170px;
-    float: left;
+    margin-right: 400px;
+    float: right;
 }
 .footer .bot-part-footer .footer-social-network {
     margin-left: 450px;
     margin-top: 17px;
     float: left;
-}
+}/*
 .footer .bot-part-footer a {
     width: 16px;
     height: 16px;
@@ -610,21 +630,39 @@ Style for big header
     margin-left: 0px;
 }
 .footer .bot-part-footer .footer-facebook {
-    background: url(img/facebook_icon.png) no-repeat 50% 50%;
+    background: url(../img/facebook_icon.png) no-repeat 50% 50%;
 }
 .footer .bot-part-footer .footer-twitter {
-    background: url(img/twitter_icon.png) no-repeat 50% 50%; 
+    background: url(../img/twitter_icon.png) no-repeat 50% 50%; 
 }
 .footer .bot-part-footer .footer-pinterest {
-     background: url(img/pinterest_icon.png) no-repeat 50% 50%;   
+     background: url(../img/pinterest_icon.png) no-repeat 50% 50%;   
 }
 .footer .bot-part-footer .footer-youtub {
-     background: url(img/youtube_icon.png) no-repeat 50% 50%;;
+     background: url(../img/youtube_icon.png) no-repeat 50% 50%;;
 }
 .footer .bot-part-footer .footer-instagramm {
-     background: url(img/insta_icon.png) no-repeat 50% 50%;
+     background: url(../img/insta_icon.png) no-repeat 50% 50%;
+}*/
+.footer-our-contact {
+    display: block;
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    left: 70px;
+    top: 10px;
+    color: #fff;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-family: "Myriad Pro";
+    font-weight: 700;
+    text-align: center;
 }
-
+.footer-our-contact:hover {
+    color: #000;
+    background-color: #f8f8f8;
+}
 /***********************
 *** Product alone page ***
 **************************/

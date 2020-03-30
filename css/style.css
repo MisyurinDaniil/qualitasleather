@@ -4,11 +4,33 @@
   font-style: normal;
   src: url("../fonts/MyriadPro-Regular.woff2") format("woff2"), url("../fonts/MyriadPro-Regular.woff.woff") format("woff");
 }
+@font-face {
+  font-weight: 900;
+  font-family: "Roboto";
+  font-style: normal;
+  src: url("../fonts/Roboto-black.woff2") format("woff2"), url("../fonts/Roboto-black.woff") format("woff");
+}
 body {
     font-family: "MyriadPro";
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
+}
+/*****************
+Button our contacts
+*********************/
+.button-our-contacts {
+    display: block;
+    width: 135px;
+    height: 25px;
+    line-height: 26px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.button-our-contacts:hover {
+    color: #000;
+    background-color: #f8f8f8
 }
 /*****************
 *****Header********
@@ -23,37 +45,26 @@ body {
     background-repeat: no-repeat;
     padding-top: 0.1px;
 }
+.page-header__our-contacts {
+    position: absolute;   
+    top: 25px;
+    right: 22px;
+}
 .page-header__logo-wrap {
     width: 77px;
     height: 87px;
-    margin-left: 22px;
+    margin-left: 25px;
     margin-top: 25px;
 }
 .page-header__logo-link {
     display: block;    
-}
-.page-header__our-contacts {
-    position: absolute;
-    display: block;
-    width: 135px;
-    height: 25px;
-    line-height: 26px;
-    top: 25px;
-    right: 22px;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
-}
-.page-header__our-contacts:hover {
-    color: #000;
-    background-color: #f8f8f8
 }
 .page-header__titel {
     width: 250px;
     text-align: right;
     position: absolute;
     top: 190px;
-    right: 26px;
+    right: 25px;
     font-size: 24px;
     line-height: 30px;
     color: #fff;
@@ -68,19 +79,23 @@ body {
         background-image: url(../img/heder-bacground-576px.jpg);
     }
     .page-header__logo-wrap {
-        margin-left: 50px;
+        width: 106px;
+        height: 120px;
+    }
+    .page-header__logo-wrap {
+        margin-left: 40px;
     }
     .page-header__our-contacts {
         width: 135px;
         height: 25px;
         line-height: 26px;
         top: 25px;
-        right: 50px;
+        right: 37px;
     }
     .page-header__titel {
         width: 355px;
         top: 150px;
-        right: 50px;
+        right: 40px;
         font-size: 36px;
         line-height: 36px;
     }
@@ -91,11 +106,15 @@ body {
         height: 400px;
         background-image: url(../img/heder-bacground-768px.jpg);
     }
+    .page-header__logo-wrap {
+        margin-left: 50px;
+    }
     .page-header__our-contacts {
         width: 170px;
         height: 30px;
         font-size: 20px;
         line-height: 30px;
+        right: 47px;
     }
     .page-header__titel {
         width: 480px;
@@ -133,5 +152,382 @@ body {
     }
     .page-header__titel > br {
         display: none;
+    }
+}
+/*******************
+*****page main******
+*********************/
+
+.page-main {
+    display: block;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #efefef;
+}
+@media (min-width: 768px) {
+    .page-main {
+        width: 768px;
+    }
+}
+@media (min-width: 992px) {
+    .page-main {
+        display: flex;
+        justify-content:space-between;
+        width: 992px;
+    }
+}
+@media (min-width: 1200px) {
+    .page-main {
+        width: 1200px;
+    }
+}
+/*********************
+****Main-navigation****
+***********************/
+.main-nav__title {
+    height: 60px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+.main-nav__list {
+    padding: 0;
+    margin: 0;
+}
+.main-nav__item {
+    height: 37px;
+    list-style: none;
+    border-bottom: 1px solid #a2a2a1;
+}
+.main-nav__link {
+    display: block;
+    height: 100%;
+    padding-left: 40px;
+    text-decoration: none;
+    line-height: 37px;
+    color: #000;`
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 14px;
+    background-color: #e0e0e0;
+    text-transform: uppercase;
+}
+.main-nav__link:hover {
+    background-color: #333;
+    color: #fff;
+}
+.main-nav__link:hover {
+    text-decoration: underline;
+}
+@media (min-width: 992px) {
+    .main-nav {
+        width: 270px;
+        margin: 0;
+        flex-shrink: 0;
+    }
+}
+/********************
+***Main content block***
+********************/
+.main-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0.1px;
+}
+@media (min-width: 576px) {
+    .main-content {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+@media (min-width: 768px) {
+    .main-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (min-width: 992px) {
+    .main-content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+@media (min-width: 1200px) {
+    .main-content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+/*********************
+******Product grid*******
+**********************/
+.product-grid__title {
+    height: 24px;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #707070;
+    margin: 0;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+.product-grid__list {
+    margin: 0;
+    padding: 0;
+}
+.product {
+    list-style: none;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.product__link {
+    display: flex;
+    padding: 10px;
+    text-decoration: none;
+    position: relative;
+}
+.product__link:hover {
+    box-shadow: 0 0 15px 5px #959595;
+}
+.product__link:hover .product__title{
+    text-decoration: underline;
+}
+.product__image-wraper {
+    width: 90px;
+    height: 85px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.product__img {
+    width: 90px;
+    height: 85px;
+}
+.product__description-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #333;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+.product__title {
+    margin: 0;
+    line-height: 18px;
+}
+.product__price {
+    margin: 0;
+    font-weight: 700;
+}
+.product__sale-price {
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    left: 80px;
+    font-weight: 400;
+    color: #e24602;
+    text-decoration:line-through
+}
+@media (min-width: 576px) {
+    .product-grid__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .product {
+        display: flex;
+        width: 230px;
+        margin-bottom: 30px;
+    }
+    .product__link {
+        flex-direction: column;
+    }
+    .product__image-wraper {
+        width: 210px;
+        height: 196px;
+    }
+    .product__img {
+        width: 210px;
+        height: 196px;
+    }
+    .product__description-wrap {
+        margin-left: 0px;
+        padding: 0;
+    }
+    .product__title {
+        padding: 15px 0 15px 0;
+    }
+    .product__price {
+        margin-top: 0;
+    }
+}
+@media (min-width: 992px) {
+    .product {
+        width: 210px;
+    }
+    .product__image-wraper {
+        width: 190px;
+        height: 177px;
+    }
+    .product__img {
+        width: 190px;
+        height: 177dpx;
+    }
+}
+@media (min-width: 1200px) {
+    .product {
+        width: 270px;
+    }
+    .product__image-wraper {
+        width: 250px;
+        height: 235px;
+    }
+    .product__img {
+        width: 250px;
+        height: 235px;
+    }
+}
+/*******************
+**Product triangle***
+********************/
+.triangle-field-new {
+    display: block;
+    width: 0;
+    height: 0;
+    border: 22px solid transparent; 
+    border-top: 22px solid #e24602;
+    border-right: 22px solid #e24602;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.triangle-text-new {
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 9px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    right: 4px;
+}
+.triangle-field-hot {
+    display: block;
+    width: 0;
+    height: 0;
+    border: 24px solid transparent; 
+    border-top: 24px solid #faef03;
+    border-right: 24px solid #faef03;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.triangle-text-hot {
+    color: #000000;
+    font-family: "Roboto";
+    font-size: 9px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    right: 4px;
+}
+/***************
+*****Footer*****
+****************/
+.page-footer {
+    min-width: 320px;
+    margin: 0 auto;
+}
+.footer-insta {
+    height: 70px;
+    background-color: #e0e0e0;
+    padding-top: 0.1px;
+}
+.footer-insta__text-block {
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 0;
+    font-size: 19px;
+    color: #333333;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+.footer-insta__text-block:hover {
+    text-decoration: underline;
+}
+.footer-insta__text-block span{
+    vertical-align: middle;
+}
+.footer-insta__img-insta {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url(../img/instagram.png);
+    background-repeat: no-repeat;  
+}
+.footer-insta__big-text {
+    font-size: 20px;
+}
+.footer-insta__small-text {
+    font-size: 16px;
+}
+.footer {
+    height: 115px;
+    background-color: #373737;
+    position: relative;
+    padding-top: 0.1px;
+    color: #dad9d9;
+}
+.footer__our-contacts {
+    margin: 20px auto 0 auto;
+}
+.footer__designedby {
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .page-footer {
+        width: 768px;
+    }
+    .footer {
+        display: flex;
+        height: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .footer__our-contacts {
+        margin: 0;
+    }
+    .footer__designedby {
+        margin: 0;
+    }
+    .footer__designedby > br {
+        display: none;
+    }
+}
+@media (min-width: 992px) {
+    .page-footer {
+        width: 992px;
+    }
+    .footer {
+        padding-left: 25px;
+        padding-right: 270px;
+    }
+}
+@media (min-width: 1200px){
+    .page-footer {
+        width: 1200px;
+    }
+    .footer {
+        padding-left: 30px;
+        padding-right: 350px;
     }
 }

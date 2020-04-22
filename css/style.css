@@ -74,7 +74,7 @@ Button our contacts
 
 @media (min-width: 576px) {
     .page-header {
-        min-width: 576px;
+        width: 576px;
         height: 280px;
         background-image: url(../img/heder-bacground-576px.jpg);
     }
@@ -163,6 +163,11 @@ Button our contacts
     min-width: 320px;
     margin: 0 auto;
     background-color: #efefef;
+}
+@media (min-width: 576px) {
+    .page-main {
+        width: 576px;
+    }
 }
 @media (min-width: 768px) {
     .page-main {
@@ -490,6 +495,11 @@ Button our contacts
 }
 .footer__designedby {
     text-align: center;
+}
+@media (min-width: 576px) {
+    .page-footer {
+        width: 576px;
+    }
 }
 @media (min-width: 768px) {
     .page-footer {

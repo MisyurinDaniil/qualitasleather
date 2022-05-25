@@ -629,13 +629,19 @@ Button our contacts
     display: flex;
     justify-content: center;
 }
-.goods-image__medium-image-link {
+.goods-image__medium-image-list {
+    padding: 0;
+    margin: 0;
+}
+.goods-image__medium-image-block {
     margin-left: 10px;
     margin-right: 10px;
     display: block;
     min-width: 200px;
     max-width: 250px;
+    list-style: none;
     overflow: hidden;
+    cursor: pointer;
 }
 .goods-image__medium-image {
     display: block;
@@ -725,6 +731,9 @@ Button our contacts
     padding: 14px;
     cursor: pointer;
 }
+.goods-image__small-image-wrap {
+    display: none;
+}
 @media (min-width: 576px) {
     .goods-image {
         display: flex;
@@ -732,9 +741,17 @@ Button our contacts
         justify-content: center;
     }
     .goods-image__small-image-wrap {
-        display: flex !important;
+        display: flex;
         justify-content: space-evenly;
         margin-top: 25px;
+    }
+    .goods-image__small-image-list {
+        display: flex;
+        align-items: center;
+        width: 234px;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
     }
     .goods-image__arrow--display-none {
         display: none;
@@ -755,15 +772,23 @@ Button our contacts
         flex-shrink:0;
         cursor: pointer;
     }
-    .goods-image__medium-image-link {
+    .goods-image__medium-image-block {
         max-width: 300px;
         margin: 0;
     }
-    .goods-image__small-image-link {
+    .goods-image__small-image-block {
         width: 70px;
         height: 110px;
+                flex-shrink: 0;
         cursor: pointer;
-        overflow: hidden;
+        list-style: none;
+    }
+    .goods-image__small-image-block:not(:first-child) {
+        margin-left: 10px;
+
+    }
+    .goods-image__small-image-block-border {
+        border: 2px solid #fb4d01;
     }
 }
 @media (min-width: 768px) {
@@ -812,7 +837,7 @@ Button our contacts
     .goods-image {
         width: 330px;
     }
-    .goods-image__medium-image-link {
+    .goods-image__medium-image-block {
         max-width: 330px;
     }
     .goods-specifications {
@@ -903,6 +928,63 @@ Button our contacts
 
 
 
+/****************************
+******Pop-up WINDOW*********
+***************************/
+
+.modal-window {
+    display: none;
+    background-color: #1C1C1C;
+    color: #efefef;
+    padding: 40px 20px 20px 20px;
+}
+.modal-window__title {
+    padding: 0;
+    color: #efefef; 
+}
+.modal-window__text {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.modal-window__list {
+    padding: 0;
+    margin: 0;
+}
+.modal-window__list-element {
+    font-size: 14px;
+    text-transform: uppercase;
+    list-style-type: none;
+    padding-top: 15px;
+    margin: 0;
+}
+.modal-window__input_title {
+    display: block;
+    margin-bottom: 5px;
+}
+.modal-window__input {
+    display: block;
+    min-width: 268px;
+}
+@media (min-width: 576px) {
+    .modal-window {
+        font-size: 20px;
+    }
+    .modal-window__input {
+        display: block;
+        min-width: 350px;
+    }
+    .modal-window {
+        padding: 40px;
+    }
+    .modal-window__list-element {
+        padding-top: 25px;
+    }
+}
+
+
+
 /*************************
 ********Bottom CSS file*****
 *****IPORTANT CSS CLASS****
@@ -911,3 +993,6 @@ Button our contacts
 .display-none {
     display: none;
 }
+
+
+

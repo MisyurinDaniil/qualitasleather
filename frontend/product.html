@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Product</title>
-    
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="fancybox-master/dist/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="fancybox-master/dist/jquery.fancybox.min.js"></script>
-    <script src="js/script.js"></script>
+    <link defer rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link defer rel="stylesheet" href="css/normalize.css">
+    <link defer rel="stylesheet" href="css/fancybox4/fancybox4.css">
+    <link defer rel="stylesheet" href="css/style.css">
+    <script defer src="js/fancybox4/fancybox.umd.js"></script>
+    <script defer src="js/script.js"></script>
 </head>
 <body class="page">
     <div class=page-wrapper>
@@ -65,50 +63,49 @@
                 <section class="goods">
                     <h1 class="goods__title goods__title--visually-hidden">Сумка черная кожанная</h1>
                     <div class="goods-image">
-                        <div class="goods-image__medium-image-wrap">
-                            <div class="goods-image__big-left-arrow goods-image__arrow--display-none"></div>
-                            <ul class="goods-image__medium-image-list">
-                                <li class="goods-image__medium-image-block" data-fancybox="gallery" data-src="img/products/big-black-bag/big-black-bag-1.jpg">
-                                    <img class="goods-image__medium-image" src="img/products/big-black-bag/medium-black-bag-1.jpg" alt="Черная кожанная сумка">
-                                </li>
-                                <li class="goods-image__medium-image-block display-none" data-fancybox="gallery" data-src="img/products/big-black-bag/big-black-bag-2.jpg">
-                                    <img class="goods-image__medium-image" src="img/products/big-black-bag/medium-black-bag-2.jpg" alt="Черная кожанная сумка">
-                                </li>
-                                <li class="goods-image__medium-image-block display-none" data-fancybox="gallery" data-src="img/products/big-black-bag/big-black-bag-3.jpg">
-                                    <img class="goods-image__medium-image" src="img/products/big-black-bag/medium-black-bag-3.jpg" alt="Черная кожанная сумка">
-                                </li>
-                                <li class="goods-image__medium-image-block display-none" data-fancybox="gallery" data-src="img/products/big-black-bag/big-black-bag-4.jpg">
-                                    <img class="goods-image__medium-image" src="img/products/big-black-bag/medium-black-bag-4.jpg" alt="Черная кожанная сумка">
-                                </li>
-                            </ul>
-                            <div class="goods-image__big-right-arrow goods-image__arrow--display-none"></div>
+                        <div id="mainCarousel" class="carousel">
+                            <div
+                                class="carousel__slide"
+                                data-src="img/products/black-bag/black-bag-2560x1709-001.jpg"
+                                data-fancybox="gallery"
+                            >
+                                <img src="img/products/black-bag/black-bag-370x370-2-001.jpg" />
+                            </div>
+                            <div
+                                class="carousel__slide"
+                                data-src="img/products/black-bag/black-bag-2560x1709-002.jpg"
+                                data-fancybox="gallery"
+                            >
+                                <img src="img/products/black-bag/black-bag-370x370-2-002.jpg" />
+                            </div>
+                            <div
+                                class="carousel__slide"
+                                data-src="img/products/black-bag/black-bag-2560x1709-003.jpg"
+                                data-fancybox="gallery"
+                            >
+                                <img src="img/products/black-bag/black-bag-370x370-2-003.jpg" />
+                            </div>
+                            <div
+                                class="carousel__slide"
+                                data-src="img/products/black-bag/black-bag-2560x1709-004.jpg"
+                                data-fancybox="gallery"
+                            >
+                                <img src="img/products/black-bag/black-bag-370x370-2-004.jpg" />
+                            </div>
                         </div>
-                        <div class="goods-image__small-image-wrap">
-                            <div class="goods-image__small-left-arrow"></div>
-                            <ul class="goods-image__small-image-list">
-                                <li class="goods-image__small-image-block goods-image__small-image-block-border">
-                                    <img class="goods-image__small-image" data-medium-src="img/products/big-black-bag/medium-black-bag-1.jpg" src="img/products/big-black-bag/small-black-bag-1.jpg" alt="маленькое изображение черной кожанной сумки">
-                                </li>
-                                <li class="goods-image__small-image-block">
-                                    <img class="goods-image__small-image" data-medium-src="img/products/big-black-bag/medium-black-bag-2.jpg" src="img/products/big-black-bag/small-black-bag-2.jpg" alt="маленькое изображение черной кожанной сумки">
-                                </li>
-                                <li class="goods-image__small-image-block">
-                                    <img class="goods-image__small-image" data-medium-src="img/products/big-black-bag/medium-black-bag-3.jpg" src="img/products/big-black-bag/small-black-bag-3.jpg" alt="маленькое изображение черной кожанной сумки">
-                                </li>
-                                <li class="goods-image__small-image-block">
-                                    <img class="goods-image__small-image" data-medium-src="img/products/big-black-bag/medium-black-bag-4.jpg" src="img/products/big-black-bag/small-black-bag-4.jpg" alt="маленькое изображение черной кожанной сумки">
-                                </li>
-                                <li class="goods-image__small-image-block">
-                                    <img class="goods-image__small-image" data-medium-src="img/products/big-black-bag/medium-black-bag-4.jpg" src="img/products/big-black-bag/small-black-bag-4.jpg" alt="маленькое изображение черной кожанной сумки">
-                                </li>
-                                <li class="goods-image__small-image-block">
-                                    <img class="goods-image__small-image" data-medium-src="img/products/big-black-bag/medium-black-bag-3.jpg" src="img/products/big-black-bag/small-black-bag-3.jpg" alt="маленькое изображение черной кожанной сумки">
-                                </li>
-                                <li class="goods-image__small-image-block">
-                                    <img class="goods-image__small-image" data-medium-src="img/products/big-black-bag/medium-black-bag-3.jpg" src="img/products/big-black-bag/small-black-bag-3.jpg" alt="маленькое изображение черной кожанной сумки">
-                                </li>
-                            </ul>
-                            <div class="goods-image__small-right-arrow"></div>
+                        <div id="thumbCarousel" class="carousel">
+                            <div class="carousel__slide">
+                                <img class="panzoom__content" src="img/products/black-bag/black-bag-100x100-001.jpg" />
+                            </div>
+                            <div class="carousel__slide">
+                                <img class="panzoom__content" src="img/products/black-bag/black-bag-100x100-002.jpg" />
+                            </div>
+                            <div class="carousel__slide">
+                                <img class="panzoom__content" src="img/products/black-bag/black-bag-100x100-003.jpg" />
+                            </div>
+                            <div class="carousel__slide">
+                                <img class="panzoom__content" src="img/products/black-bag/black-bag-100x100-004.jpg" />
+                            </div>
                         </div>
                     </div>
                     <div class="goods-specifications">
@@ -139,34 +136,34 @@
                         <button data-fancybox="" data-src="#modal-window" class="main-button">Оформить заказ</button>
                     </div>
                     <div id="modal-window" class="modal-window">
-                            <h1 class="main-h1-title modal-window__title">Заполните форму</h1>
-                            <p class="modal-window__text">Укажите детали заказа и мы свяжемся с вами в ближайшее время</p>
-                            <form action="" class="modal-window__form">
-                                <ul class="modal-window__list">
-                                    <li class="modal-window__list-element">
-                                        <span class="modal-window__input_title">Изделие:</span>
-                                        <span class="modal-window__input_title">Сумка черная кожанная</span>
-                                        <img src="img/products/big-black-bag/small-black-bag-1.jpg" alt="маленькое изображение черной кожанной сумки">
-                                    </li>
-                                    <li class="modal-window__list-element">
-                                        <label class="modal-window__input_title" for="input-name">Как вас зовут:</label>
-                                        <input class="modal-window__input" type="text" placeholder="Имя" id="input-name">
-                                    </li>
-                                    <li class="modal-window__list-element">
-                                        <label class="modal-window__input_title" for="input-telephone">Контактный телефон:</label>
-                                        <input class="modal-window__input type="text" placeholder="Номер телефона" id="input-telephone">
-                                    </li>
-                                    <li class="modal-window__list-element">
-                                        <label class="modal-window__input_title" for="input-commet">Комментарий к заказу:</label>
-                                        <textarea class="modal-window__input type="text" placeholder="Комментарий" id="input-commet"></textarea>
-                                    </li>
-                                    <li class="modal-window__list-element">
-                                        <input class="main-button" type="button" value="Отправить">
-                                    </li>
-                                </ul>
-                            </form>
-                    </div> 
-                </section>
+                        <h1 class="main-h1-title modal-window__title">Заполните форму</h1>
+                        <p class="modal-window__text">Укажите детали заказа и мы свяжемся с вами в ближайшее время</p>
+                        <form action="" class="modal-window__form">
+                            <ul class="modal-window__list">
+                                <li class="modal-window__list-element">
+                                    <span class="modal-window__input_title">Изделие:</span>
+                                    <span class="modal-window__input_title">Сумка черная кожанная</span>
+                                    <img src="img/products/big-black-bag/small-black-bag-1.jpg" alt="маленькое изображение черной кожанной сумки">
+                                </li>
+                                <li class="modal-window__list-element">
+                                    <label class="modal-window__input_title" for="input-name">Как вас зовут:</label>
+                                    <input class="modal-window__input" type="text" placeholder="Имя" id="input-name">
+                                </li>
+                                <li class="modal-window__list-element">
+                                    <label class="modal-window__input_title" for="input-telephone">Контактный телефон:</label>
+                                    <input class="modal-window__input type="text" placeholder="Номер телефона" id="input-telephone">
+                                </li>
+                                <li class="modal-window__list-element">
+                                    <label class="modal-window__input_title" for="input-commet">Комментарий к заказу:</label>
+                                    <textarea class="modal-window__input type="text" placeholder="Комментарий" id="input-commet"></textarea>
+                                </li>
+                                <li class="modal-window__list-element">
+                                    <input class="main-button" type="button" value="Отправить">
+                                </li>
+                            </ul>
+                        </form>
+                </div> 
+                </section>     
                 <section class="payment-delivery">
                     <div class="payment-delivery__wrap">
                         <div class="payment-delivery__button">Способы оплаты</div>
@@ -203,6 +200,5 @@
             <p class="footer__designedby">© 2020 QualitasLeather. All rights reserved.<br> Designed by Daniil Misyurin</p>
         </div>
     </footer>
-
 </body>
 </html>    

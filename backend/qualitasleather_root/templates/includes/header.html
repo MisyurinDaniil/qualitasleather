@@ -1,0 +1,14 @@
+{% load static %}
+<header class="page-header">
+    <div class="page-header__logo-wrap">
+        <a href="/" class="page-header__logo-link">
+            <picture>
+                <source media="(min-width: 768px)" srcset="{% static 'img/logo-big.png' %}">
+                <img class="page-header__logo-img" src="{% static 'img/logo-small.png' %}" alt="Логотип мастерской Qualitas Leather">
+            </picture>
+
+        </a>
+    </div>
+    <a href="/contacts/" class="button-our-contacts page-header__our-contacts">Наши контакты</a>
+    <p class="page-header__titel">Кожанные изделия<br> ручной работы</p>
+</header>

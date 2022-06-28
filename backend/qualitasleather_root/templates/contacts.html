@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Наши контакты
+{% endblock %}
+{% block mainContent %}
+    <div class="main-content">
+        <section class="contacts">
+            <h1 class="main-h1-title contacts__title">Наши контакты</h1>
+            <p class="contacts__paragraph">Для связи с нами используйте один из удобных для вас способов представленных ниже:</p>
+            <div class="contacts__method">
+                <i class="contacts__method-icon fa fa-phone fa-fw" aria-hidden="true"></i>
+                <span class="contacts__method-text"><a href="tel:+79896307755">+7 (989) 630-77-55 (Звонок)</a></span>
+            </div>
+            <div class="contacts__method">
+                <i class="contacts__method-icon fa fa-whatsapp fa-fw" aria-hidden="true"></i>
+                <span class="contacts__method-text"><a href="https://wa.me/79896307755">+7 (989) 630-77-55 (WhatsApp)</a></span>
+            </div>
+            <div class="contacts__method">
+                <i class="contacts__method-icon fa fa-telegram fa-fw" aria-hidden="true"></i>
+                <span class="contacts__method-text"><a href="https://telegram.im/webengineer">+7 (989) 630-77-55 (Telegram)</a></span>
+            </div>
+            <div class="contacts__method">
+                <i class="contacts__method-icon fa fa-instagram fa-fw" aria-hidden="true"></i>
+                <span class="contacts__method-text"><a href="https://www.instagram.com/qualitas_leather/">Instagram: #qualitas_leather</a></span>
+            </div>
+            <div class="contacts__method">
+                <i class="contacts__method-icon fa fa-envelope fa-fw" aria-hidden="true"></i>
+                <span class="contacts__method-text"><a href="mailto:yourmail@mysite.com">qualitas_leather@gmail.com</a></span>
+            </div>
+            <p class="contacts__paragraph">Если у вас есть вопросы по поводу Вашего заказа или вам нужнакакая-либо общая информация, наша служба поддержки клиентов будет рада помочь вам</p>
+        </section>
+        {% include 'includes/payment.html' %}
+        {% include 'includes/delevery.html' %}
+    </div>
+{% endblock %}

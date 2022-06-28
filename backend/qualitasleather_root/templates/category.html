@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Страница категорий продуктов
+{% endblock %}
+{% block mainContent %}
+    <div class="main-content">
+        <section class="product-grid">
+            <h1 class="main-h1-title product-grid__title">Категория товара</h1>
+            <ul class="product-grid__list">
+                <li class="product">
+                    <a href="/product/" class="product__link">
+                        <div class="product__image-wraper">
+                            <img src="{% static 'img/product-1.jpg' %}" alt="Товар" class="product__img">
+                        </div>
+                        <div class="product__description-wrap">
+                            <p class="product__title">Мужской ремень</p>
+                            <p class="product__price">6 000 &#8381;</p>
+                        </div>
+                        <span class="triangle-field-new"></span>
+                        <span class="triangle-text-new">new</span>
+                    </a>
+                </li>
+                <li class="product">
+                    <a href="/product/" class="product__link">
+                        <div class="product__image-wraper">
+                            <img src="{% static 'img/product-2.jpg' %}" alt="Товар" class="product__img">
+                        </div>
+                        <div class="product__description-wrap">
+                            <p class="product__title">Коричневый кошель</p>
+                            <p class="product__price">6 000 &#8381;</p>
+                        </div>
+                        <span class="triangle-field-new"></span>
+                        <span class="triangle-text-new">new</span>
+                    </a>
+                </li>
+                <li class="product">
+                    <a href="/product/" class="product__link">
+                        <div class="product__image-wraper">
+                            <img src="{% static 'img/product-3.jpg' %}" alt="Товар" class="product__img">
+                        </div>
+                        <div class="product__description-wrap">
+                            <p class="product__title">Коричневая сумка</p>
+                            <p class="product__price">6 000 &#8381;</p>
+                        </div>
+                        <span class="triangle-field-new"></span>
+                        <span class="triangle-text-new">new</span>
+                    </a>
+                </li>
+                <li class="product">
+                    <a href="/product/" class="product__link">
+                        <div class="product__image-wraper">
+                            <img src="{% static 'img/product-4.jpg' %}" alt="Товар" class="product__img">
+                        </div>
+                        <div class="product__description-wrap">
+                            <p class="product__title">Маленький коричневый кошелек</p>
+                            <p class="product__price">6 000 &#8381;</p>
+                        </div>
+                        <span class="triangle-field-new"></span>
+                        <span class="triangle-text-new">new</span>
+                    </a>
+                </li>
+                <li class="product">
+                    <a href="/product/" class="product__link">
+                        <div class="product__image-wraper">
+                            <img src="{% static 'img/product-5.jpg' %}" alt="Товар" class="product__img">
+                        </div>
+                        <div class="product__description-wrap">
+                            <p class="product__title">Коричневая обложка для документов</p>
+                            <p class="product__price">6 000 &#8381;</p>
+                        </div>
+                        <span class="triangle-field-new"></span>
+                        <span class="triangle-text-new">new</span>
+                    </a>
+                </li>
+                <li class="product">
+                    <a href="/product/" class="product__link">
+                        <div class="product__image-wraper">
+                            <img src="{% static 'img/product-6.jpg' %}" alt="Товар" class="product__img">
+                        </div>
+                        <div class="product__description-wrap">
+                            <p class="product__title">Зеленый женский кошель </p>
+                            <p class="product__price">6 000 &#8381;</p>
+                        </div>
+                        <span class="triangle-field-new"></span>
+                        <span class="triangle-text-new">new</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+{% endblock %}

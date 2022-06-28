@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{% block title %}Главная страница{% endblock %}</title>
+    <link defer rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <link defer rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    {% block extraCSS %}
+    {% endblock %}
+    <link defer rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extraJS %}
+    {% endblock %}
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+<body class="page">
+    <div class=page-wrapper>
+        {% include 'includes/header.html' %}
+        <main class="page-main">
+            {% include 'includes/left-nav.html' %}
+            {% block mainContent %}
+            {% endblock %}
+        </main>
+    </div>
+    {% include 'includes/footer.html' %}
+</body>
+</html>    

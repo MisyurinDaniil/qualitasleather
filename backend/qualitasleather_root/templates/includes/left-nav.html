@@ -5,29 +5,10 @@
         <span class="main-nav__title-text">Меню</span>
     </div>
     <ul class="main-nav__list main-nav__list--closed main-nav__list--nojs">
+        {% for productCategory in productCategoryList %}
         <li class="main-nav__item">
-            <a class="main-nav__link" href="/category/">Ремни</a>
+            <a class="main-nav__link" href="/category/{{productCategory.id}}">{{productCategory.product_category_name}}</a>
         </li>
-        <li class="main-nav__item">
-            <a class="main-nav__link" href="/category/">Портмоне</a>
-        </li>
-        <li class="main-nav__item">
-            <a class="main-nav__link" href="/category/">Ручные сумки</a>
-        </li>
-        <li class="main-nav__item">
-            <a class="main-nav__link" href="/category/">Обложки</a>
-        </li>
-        <li class="main-nav__item">
-            <a class="main-nav__link" href="/category/">Чехлы для гаджетов</a>
-        </li>
-        <li class="main-nav__item">
-            <a class="main-nav__link" href="/category/">Аксессуары</a>
-        </li>
-        <li class="main-nav__item">
-            <a class="main-nav__link" href="/category/">Ремешки для часов</a>
-        </li>
-        <li class="main-nav__item">
-            <a class="main-nav__link" href="/category/">Чехлы для канцтоваров</a>
-        </li>
+        {% endfor %}
     </ul>
 </nav>

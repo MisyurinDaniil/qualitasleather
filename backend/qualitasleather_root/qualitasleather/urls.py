@@ -17,7 +17,9 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from appIndexSlider import views
+
+from appCMS import views
+
 
 # urlpatterns = [
 #     path('admin/', admin.site.urls),
@@ -25,7 +27,7 @@ from appIndexSlider import views
 
 urlpatterns = [
     path('', views.index_page),
-    path('category/', views.category_page),
+    path('category/<int:idProductCategory>/', views.category_page),
     path('product/', views.product_page),
     path('contacts/', views.contacts_page),
     path('admin/', admin.site.urls),

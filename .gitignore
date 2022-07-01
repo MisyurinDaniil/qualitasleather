@@ -1,4 +1,5 @@
 backend/venv310/
+backend/venv/
 __pycache__/
 
 # .idea/

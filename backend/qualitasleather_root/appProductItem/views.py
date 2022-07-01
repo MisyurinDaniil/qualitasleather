@@ -3,46 +3,21 @@ from .models import ProductItem
 
 # Create your views here.
 
-def getProductsItems():
-    # Получаем данные из БД
+# def getProdItemsByCategory(productCategoryId):
+def getProdItemsByCategory(idProductCategory):
     product_list = ProductItem.objects.all()
-    print(product_list, type(product_list))
-    # >>> <QuerySet [<ProductItem: Сумка черная большая>]> <class 'django.db.models.query.QuerySet'>
+    filterProducts = []
+    for product in product_list:
+        if (product.__dict__['product_category_id'] == idProductCategory):
+            filterProducts.append(product)
+            
+    return filterProducts
 
-getProductsItems()
+# print(getProdItemsByCategory())
 
-
-# Разбриаемся с Python. Типы данных, переменные
-
-number = 1
-print(number, type(number))
-# >>> 1 <class 'int'>
-
-text = 'My text'
-print(text, type(text))
-# >>> My text <class 'str'>
-
-type_list = [1, 'a', 2, 'b', [1, 'a', 2, 'b'], (1, 'a', 2, 'b')]
-print(type_list, type(type_list))
-# >>> [1, 'a', 2, 'b'] <class 'list'>
-
-corteg=(1, 'a', 2, 'b')
-print(corteg, type(corteg))
-# >>> (1, 'a', 2, 'b') <class 'tuple'>
-
-dictionary = {
-    '1': 1,
-    2 : 2,
-    'Три' : 'Три'
-}
-print(dictionary, type(dictionary))
-
-class MyClass():
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-people = MyClass('Pol','11')
-print(MyClass, type(MyClass))
-print(people, type(people))
-# >>> <class 'appProductItem.views.MyClass'> <class 'type'>
-# >>> <appProductItem.views.MyClass object at 0x00000172EE585D20> <class 'appProductItem.views.MyClass'>
+# {'_state': <django.db.models.base.ModelState object at 0x000001AA6981BEB0>, 'id': 1, 
+# 'product_name': 'Сумка черная большая', 'product_category_id': 1, 'product_group_id': 1, 
+# 'product_price': '17880', 'product_old_price': '20120', 'product_color_id': 1, 
+# 'product_material_id': 1, 'product_fitting_id': 1, 'product_make_time_id': 1, 
+# 'product_size': '17х19х20', 'product_description': 'Самый волшебный сумка, которую ты видел, БРАТ!',
+#  'product_img_main': 'product_img/black-bag-250x235-001.jpg', 'product_img_main_alt': 'картинка'}

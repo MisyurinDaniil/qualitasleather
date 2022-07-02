@@ -1,87 +1,58 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-    Страница продукта
-{% endblock %}
-{% block extraCSS %}
-    <link defer rel="stylesheet" href="{% static 'css/fancybox4/fancybox4.css' %}">
-{% endblock %}
-{% block extraJS %}
-    <script defer src="{% static 'js/fancybox4/fancybox.umd.js' %}"></script>
+    {{prodItem.product_name}}
 {% endblock %}
 {% block mainContent %}
     <div class="main-content">
         <section class="goods">
-            <h1 class="goods__title goods__title--visually-hidden">Сумка черная кожанная</h1>
+            <h1 class="goods__title goods__title--visually-hidden">{{prodItem.product_name}}</h1>
             <div class="goods-image">
                 <div id="mainCarousel" class="carousel">
-                    <div
-                    src="{% static 'css/style.css' %}"
-                        class="carousel__slide"
-                        data-src="{% static 'img/products/black-bag/black-bag-2560x1709-001.jpg' %}"
-                        data-fancybox="gallery"
-                    >
-                        <img src="{% static 'img/products/black-bag/black-bag-330x330-001.jpg' %}" />
-                    </div>
-                    <div
-                        class="carousel__slide"
-                        data-src="{% static 'img/products/black-bag/black-bag-2560x1709-002.jpg' %}"
-                        data-fancybox="gallery"
-                    >
-                        <img src="{% static 'img/products/black-bag/black-bag-330x330-002.jpg' %}" />
-                    </div>
-                    <div
-                        class="carousel__slide"
-                        data-src="{% static 'img/products/black-bag/black-bag-2560x1709-003.jpg' %}"
-                        data-fancybox="gallery"
-                    >
-                        <img src="{% static 'img/products/black-bag/black-bag-330x330-003.jpg' %}" />
-                    </div>
-                    <div
-                        class="carousel__slide"
-                        data-src="{% static 'img/products/black-bag/black-bag-2560x1709-004.jpg' %}"
-                        data-fancybox="gallery"
-                    >
-                        <img src="{% static 'img/products/black-bag/black-bag-330x330-004.jpg' %}" />
-                    </div>
+                    {% for image in prodImages %}
+                        <div
+                            class="carousel__slide"
+                            data-src="{{image.img_big.url}}"
+                            data-fancybox="gallery"
+                        >
+                            <img src="{{image.img_medium.url}}" />
+                        </div>
+                    {% endfor %}
                 </div>
                 <div id="thumbCarousel" class="carousel">
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="{% static 'img/products/black-bag/black-bag-100x100-001.jpg' %}" />
-                    </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="{% static 'img/products/black-bag/black-bag-100x100-002.jpg' %}" />
-                    </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="{% static 'img/products/black-bag/black-bag-100x100-003.jpg' %}" />
-                    </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="{% static 'img/products/black-bag/black-bag-100x100-004.jpg' %}" />
-                    </div>
+                    {% for image in prodImages %}
+                        <div class="carousel__slide">
+                            <img class="panzoom__content" src="{{image.img_small.url}}" />
+                        </div>
+                    {% endfor %}
+
                 </div>
             </div>
             <div class="goods-specifications">
-                <h1 class="goods__title goods__title--show-hidden-title" style="display: none;">Сумка черная кожанная</h1>
-                <span class="goods-specifications__price">Цена: 3 577 &#8381;</span>
+                <h1 class="goods__title goods__title--show-hidden-title" style="display: none;">{{prodItem.product_name}}</h1>
+                <span class="goods-specifications__price">Цена: {{prodItem.product_price}} &#8381;</span>
                 <div class="goods-specifications__split-line"></div>
                 <ul class="goods-specifications__property-list">
-                    <li class="goods-specifications__item goods-specifications__item--list">Цвет: черный</li>
-                    <li class="goods-specifications__item goods-specifications__item--list">Материал: кожа бизона</li>
-                    <li class="goods-specifications__item goods-specifications__item--list">Размер: 1500х500х400</li>
-                    <li class="goods-specifications__item goods-specifications__item--list">Срок изготоления: 7дней</li>
-                    <li class="goods-specifications__item goods-specifications__item--list">Упаковка: упаковывается в крафтовую бумагу повязанную ващеной нитью</li>
+                    <li class="goods-specifications__item goods-specifications__item--list">Цвет: {{prodItem.product_color.color}}</li>
+                    <li class="goods-specifications__item goods-specifications__item--list">Материал: {{prodItem.product_material.material}}</li>
+                    {% if prodItem.product_fitting.fitting %}
+                        <li class="goods-specifications__item goods-specifications__item--list">Фурнитура: {{prodItem.product_fitting.fitting}}</li>
+                    {% endif %}
+                    <li class="goods-specifications__item goods-specifications__item--list">Размер: {{prodItem.product_size}}</li>
+                    <li class="goods-specifications__item goods-specifications__item--list">Срок изготоления: {{prodItem.product_make_time.make_time}}</li>
                 </ul>
                 <div class="goods-specifications__split-line"></div>
                 <div class="goods-specifications__description">
                     <span class="goods-specifications__item">Описание товара:</span>
-                    <p class="goods-specifications__description-text">Бумажник из неокрашенной немецкой кожи растительного дубления, вмещающий в себя купюры, визитки и пластиковые карты. Может быть окрашен в любой цвет по вашему желанию. При покупке этого изделия вы получите монетницу в подарок.</p>
+                    <p class="goods-specifications__description-text">{{prodItem.product_description}}</p>
                 </div>
                 <div class="goods-specifications__split-line"></div>
                 <div class="goods-specifications__options">
-                    <span class="goods-specifications__item">Дополнительные опции:</span>
+                    <span class="goods-specifications__item">Дополнительные опции (цена обговаривается):</span>
                     <ul class="goods-specifications__options-list">
-                        <li class="goods-specifications__options-item">+500 рублей - нанесение монограммы тиснением</li>
-                        <li class="goods-specifications__options-item">+500 рублей - нанесение рисунка лазером</li>
+                        <li class="goods-specifications__options-item">- нанесение изображения лазером (гравировка).</li>
+                        <li class="goods-specifications__options-item">- нанесение изображения ультрафиолетовой краской (исполнение в цвете)</li>
+                        <li class="goods-specifications__options-item">- нанесение изображения методом горячего тиснения(клише изготавливается отдельно) </li>
                     </ul>
                 </div>
                 <div class="goods-specifications__split-line"></div>
@@ -94,8 +65,8 @@
                     <ul class="modal-window__list">
                         <li class="modal-window__list-element">
                             <span class="modal-window__input_title">Изделие:</span>
-                            <span class="modal-window__input_title">Сумка черная кожанная</span>
-                            <img src="{% static 'img/products/big-black-bag/small-black-bag-1.jpg' %}" alt="маленькое изображение черной кожанной сумки">
+                            <span class="modal-window__input_title">{{prodItem.product_name}}</span>
+                            <img src="{{prodImages.0.img_small.url}}" alt="маленькое изображение черной кожанной сумки">
                         </li>
                         <li class="modal-window__list-element">
                             <label class="modal-window__input_title" for="input-name">Как вас зовут:</label>

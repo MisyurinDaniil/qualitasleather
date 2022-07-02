@@ -296,12 +296,14 @@ Button our contacts
     .main-content {
         padding-left: 25px;
         padding-right: 25px;
+        width: 722px;
     }
 }
 @media (min-width: 1200px) {
     .main-content {
         padding-left: 30px;
         padding-right: 30px;
+        width: 870px;
     }
 }
 /*********************

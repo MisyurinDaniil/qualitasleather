@@ -28,7 +28,7 @@ from appCMS import views
 urlpatterns = [
     path('', views.index_page),
     path('category/<int:idProductCategory>/', views.category_page),
-    path('product/', views.product_page),
+    path('product/<int:idProductItem>/', views.product_page),
     path('contacts/', views.contacts_page),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

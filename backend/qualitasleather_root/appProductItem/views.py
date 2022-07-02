@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import ProductItem
+from .models import ProductItem, ProductImg
 
 # Create your views here.
 
@@ -13,11 +13,13 @@ def getProdItemsByCategory(idProductCategory):
             
     return filterProducts
 
-# print(getProdItemsByCategory())
+def getProdItemById(idProductItem):
+    # Invalid field name(s) given in select_related: 'productmaketime_set'. Choices are: product_category, product_group, product_color, product_material, product_fitting, product_make_time
+    product = ProductItem.objects.select_related('product_color', 'product_material', 'product_fitting', 'product_make_time').get(id=idProductItem)
+    return product
 
-# {'_state': <django.db.models.base.ModelState object at 0x000001AA6981BEB0>, 'id': 1, 
-# 'product_name': 'Сумка черная большая', 'product_category_id': 1, 'product_group_id': 1, 
-# 'product_price': '17880', 'product_old_price': '20120', 'product_color_id': 1, 
-# 'product_material_id': 1, 'product_fitting_id': 1, 'product_make_time_id': 1, 
-# 'product_size': '17х19х20', 'product_description': 'Самый волшебный сумка, которую ты видел, БРАТ!',
-#  'product_img_main': 'product_img/black-bag-250x235-001.jpg', 'product_img_main_alt': 'картинка'}
+def getProdImagesById(idProductItem):
+    images = ProductImg.objects.filter(img_binding=idProductItem)
+    return images
+            
+    

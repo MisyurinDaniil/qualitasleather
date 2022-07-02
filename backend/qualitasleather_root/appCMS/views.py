@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from appProductCategory.views import getProductsCategorys, getProductsCategorysById
-from appProductItem.views import getProdItemsByCategory
+from appProductItem.views import getProdItemsByCategory, getProdItemById, getProdImagesById
 # Create your views here.
 
 # Получаем список категорий товаров из базы данных для главного меню.
@@ -14,9 +14,9 @@ def index_page(request):
     })
 
 def category_page(request, idProductCategory):
-    # Получаем товары определенной категории по ее ID
+    # Получаем список товаров определенной категории по ID категории
     prodItemsByCategory = getProdItemsByCategory(idProductCategory)
-    # Получаем категорию товара по ее id, для вывода в заголовок
+    # Получаем категорию товара по id категории, для вывода в заголовок
     prodCategory = getProductsCategorysById(idProductCategory)
     # Отрисовываем полученные данные на странице 
     return render(request, './category.html', {
@@ -25,10 +25,16 @@ def category_page(request, idProductCategory):
         'prodCategory' : prodCategory,
     })
 
-def product_page(request):
+def product_page(request, idProductItem):
+    # Получаем товар по ID товара 
+    prodItem = getProdItemById(idProductItem)
+    # Получаем картинки товараов по ID товара 
+    prodImages = getProdImagesById(idProductItem)
     # Отрисовываем полученные данные на странице
     return render(request, './product.html', {
-        'productCategoryList' : productCategoryList
+        'productCategoryList' : productCategoryList,
+        'prodItem' : prodItem,
+        'prodImages' : prodImages,
     })
 
 def contacts_page(request):

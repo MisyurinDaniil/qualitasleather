@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from appProductCategory.views import getProductsCategorys, getProductsCategorysById
-from appProductItem.views import getProdItemsByCategory, getProdItemById, getProdImagesById
+from appProductItem.views import getProdItemsByCategory, getProdItemById, getProdImagesById, getProdItemInCategorys
 # Create your views here.
 
 # Получаем список категорий товаров из базы данных для главного меню.
@@ -8,9 +8,12 @@ productCategoryList = getProductsCategorys()
 
 # Функции вызываемые после обработки route, в зависимости от адреса
 def index_page(request):
+    prodItemsInGroups = getProdItemInCategorys()
+    print(prodItemsInGroups)
     # Отрисовываем полученные данные на странице
     return render(request, './index.html', {
-        'productCategoryList' : productCategoryList
+        'productCategoryList' : productCategoryList,
+        'prodItemsInGroups' : prodItemsInGroups,
     })
 
 def category_page(request, idProductCategory):

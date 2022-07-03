@@ -67,15 +67,19 @@ class CustomizeProductItem(admin.ModelAdmin):
     get_img.short_description = 'Миниатюра 250х235'
 
 class CustomizeProductImg(admin.ModelAdmin):
+    # Кортеж с именами полей, который хотим отобразит в админ панеле на этапе просмотра всего перечня картинок
+    list_display = ('id', 'get_img_small')
+    # Отмечаем поля по нажатию на которые можно перейти на страницу слайда
+    list_display_links = ('id', 'get_img_small')
     # Указжем поля отображаемые на карточке слайда
-    fields = ('img_small', 'get_img_small', 'alt_small', 'img_medium', 'get_img_medium', 
+    fields = ('img_binding', 'img_small', 'get_img_small', 'alt_small', 'img_medium', 'get_img_medium', 
         'alt_medium', 'img_big', 'get_img_big', 'alt_big')
     # Укажем поля только для чтения, чтобы django не вывалилвался в ошибку
     readonly_fields = ('get_img_small', 'get_img_medium', 'get_img_big')
     # Функция для отображения миниатюры картинки в админ панеле
     def get_img_small(self, obj):
         if obj.img_small:
-            return mark_safe(f'<img src="{obj.img_small.url}" width="80px"')
+            return mark_safe(f'<img src="{obj.img_small.url}" width="80px" height="50px"')
         else:
             return 'нет картинки'
     def get_img_medium(self, obj):

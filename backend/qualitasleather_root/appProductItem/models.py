@@ -18,7 +18,7 @@ class ProductColor(models.Model):
     # Изменение отображения имени класса, в единственном и множественном числе
     class Meta:
         verbose_name = "Цвет"
-        verbose_name_plural = "Цвета"
+        verbose_name_plural = "3. Цвета"
 
 # Создаем класс (модел) для таблицы Материалы
 class ProductMaterial(models.Model):
@@ -29,7 +29,7 @@ class ProductMaterial(models.Model):
 
     class Meta:
         verbose_name = "Материал"
-        verbose_name_plural = "материалы"
+        verbose_name_plural = "4. Материалы"
 
 # Создаем класс (модел) для таблицы Фурнитура
 class ProductFitting(models.Model):
@@ -40,7 +40,7 @@ class ProductFitting(models.Model):
 
     class Meta:
         verbose_name = "Фурнитура"
-        verbose_name_plural = "Фурнитруа"  
+        verbose_name_plural = "5. Фурнитруа"  
 
 # Создаем класс (модел) для таблицы Время изготовления
 class ProductMakeTime(models.Model):
@@ -51,7 +51,7 @@ class ProductMakeTime(models.Model):
 
     class Meta:
         verbose_name = "Время изготовления"
-        verbose_name_plural = "Время изготовления"  
+        verbose_name_plural = "6. Время изготовления"  
 
 # Создаем класс (модел) для таблицы Товар
 class ProductItem(models.Model):
@@ -77,7 +77,7 @@ class ProductItem(models.Model):
 
     class Meta:
         verbose_name = "Товар"
-        verbose_name_plural = "Товары"
+        verbose_name_plural = "1. Товары"
 
 # Создаем класс (модел) для таблицы Картинки товара
 class ProductImg(models.Model):
@@ -96,4 +96,4 @@ class ProductImg(models.Model):
 
     class Meta:
         verbose_name = "Картинка для слайдера товара"
-        verbose_name_plural = "Картинки для сладера товара"
+        verbose_name_plural = "2. Картинки для сладера товара"

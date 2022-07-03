@@ -5,9 +5,9 @@ from .models import ProductItem, ProductImg
 
 # def getProdItemsByCategory(productCategoryId):
 def getProdItemsByCategory(idProductCategory):
-    product_list = ProductItem.objects.all()
+    products = ProductItem.objects.all()
     filterProducts = []
-    for product in product_list:
+    for product in products:
         if (product.__dict__['product_category_id'] == idProductCategory):
             filterProducts.append(product)
             
@@ -21,5 +21,7 @@ def getProdItemById(idProductItem):
 def getProdImagesById(idProductItem):
     images = ProductImg.objects.filter(img_binding=idProductItem)
     return images
-            
-    
+
+def getProdItemInCategorys():
+    products = ProductItem.objects.select_related('product_category').exclude(product_group=1)
+    return products

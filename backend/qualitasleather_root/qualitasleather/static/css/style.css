@@ -467,14 +467,35 @@ Button our contacts
     width: 0;
     height: 0;
     border: 24px solid transparent; 
-    border-top: 24px solid #faef03;
-    border-right: 24px solid #faef03;
+    border-top: 24px solid #e6db00;;
+    border-right: 24px solid #e6db00;;
     position: absolute;
     top: 0;
     right: 0;
 }
 .triangle-text-hot {
     color: #000000;
+    font-family: "Roboto";
+    font-size: 9px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    right: 4px;
+}
+.triangle-field-sale {
+    display: block;
+    width: 0;
+    height: 0;
+    border: 24px solid transparent; 
+    border-top: 24px solid #06952a;
+    border-right: 24px solid #06952a;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.triangle-text-sale {
+    color: #ffffff;
     font-family: "Roboto";
     font-size: 9px;
     font-weight: 400;

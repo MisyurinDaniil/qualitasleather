@@ -60,13 +60,15 @@ document.addEventListener('DOMContentLoaded', function(){
     /********************************************/
     /*************Отправка формы заказа *********/
     /********************************************/
-    document.querySelector('.main-button').addEventListener('click', () => {
-        document.querySelector(".modal-window__content").classList.remove('display-none');
-        document.querySelector(".modal-window__order-true").classList.add('display-none');
-        document.querySelector(".modal-window__order-false").classList.add('display-none');
-    });
+
 
     if (document.querySelector("form")) {
+        
+        document.querySelector('.main-button').addEventListener('click', () => {
+            document.querySelector(".modal-window__content").classList.remove('display-none');
+            document.querySelector(".modal-window__order-true").classList.add('display-none');
+            document.querySelector(".modal-window__order-false").classList.add('display-none');
+        });
 
         const ajaxSend = async (formData) => {
             const response = await fetch('/makeorder/', {

@@ -9,3 +9,10 @@ class Order(models.Model):
     order_customer_name = models.CharField(max_length=255, verbose_name='Имя заказчика')
     order_customer_telephone= models.CharField(max_length=255, verbose_name='Телефон заказчика')
     order_customer_comment= models.TextField(verbose_name='Комментарий к заказу')
+
+    def __str__(self):
+        return self.order_binding.product_name
+
+    class Meta:
+        verbose_name = "Заказ"
+        verbose_name_plural = "Заказы"

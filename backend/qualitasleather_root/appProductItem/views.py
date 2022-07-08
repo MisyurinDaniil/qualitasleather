@@ -22,6 +22,6 @@ def getProdImagesById(idProductItem):
     images = ProductImg.objects.filter(img_binding=idProductItem)
     return images
 
-def getProdItemInCategorys():
+def getProdItemInGroups():
     products = ProductItem.objects.select_related('product_category').exclude(product_group=1)
     return products

@@ -18,7 +18,8 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from appCMS import views
+from appCMS.views import index_page, category_page, product_page, contacts_page
+from appOrders.views import makeorder
 
 
 # urlpatterns = [
@@ -26,9 +27,10 @@ from appCMS import views
 # ]
 
 urlpatterns = [
-    path('', views.index_page),
-    path('category/<int:idProductCategory>/', views.category_page),
-    path('product/<int:idProductItem>/', views.product_page),
-    path('contacts/', views.contacts_page),
+    path('', index_page),
+    path('category/<int:idProductCategory>/', category_page),
+    path('product/<int:idProductItem>/', product_page),
+    path('contacts/', contacts_page),
+    path('makeorder/', makeorder),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

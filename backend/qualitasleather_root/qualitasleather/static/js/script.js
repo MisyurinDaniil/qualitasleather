@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function(){
 
     // Управление кнопками (close button and toggle button) 
-    // в меню на мобильной версии проекрта для меню с группами товара 
+    // в меню мобильной версии проекрта (меню с группами товара)
     let navMain = document.querySelector('.main-nav__list');
     let navToggleBurger = document.querySelector('.burger-toggle');
 
@@ -57,6 +57,50 @@ document.addEventListener('DOMContentLoaded', function(){
             },
         });
     }
+    /********************************************/
+    /*************Отправка формы заказа *********/
+    /********************************************/
+    document.querySelector('.main-button').addEventListener('click', () => {
+        document.querySelector(".modal-window__content").classList.remove('display-none');
+        document.querySelector(".modal-window__order-true").classList.add('display-none');
+        document.querySelector(".modal-window__order-false").classList.add('display-none');
+    });
+
+    if (document.querySelector("form")) {
+
+        const ajaxSend = async (formData) => {
+            const response = await fetch('/makeorder/', {
+                method: "POST",
+                body: formData
+            });
+            if (!response.ok) {
+                throw new Error(`Ошибка по адресу /makeorder/, статус ошибки ${response.status}`);
+            }
+            return await response.text();
+        };
+
+        const forms = document.querySelectorAll("form");
+
+        forms.forEach(form => {
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+                ajaxSend(formData)
+                    .then((response) => {
+                        console.log(response);
+                        // form.reset(); // очищаем поля формы
+                        document.querySelector(".modal-window__content").classList.add('display-none')
+                        document.querySelector(".modal-window__order-true").classList.remove('display-none')
+                    })
+                    .catch((err) => {
+                        console.error(err)
+                        document.querySelector(".modal-window__content").classList.add('display-none')
+                        document.querySelector(".modal-window__order-false").classList.remove('display-none')
+                    });
+            });
+        });
+    }
+
 
 }, false);
 

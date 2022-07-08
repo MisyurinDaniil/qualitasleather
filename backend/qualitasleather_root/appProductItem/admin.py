@@ -6,7 +6,6 @@ from .models import ProductItem, ProductColor, ProductMaterial, ProductFitting, 
 class ShowImagesInProduct(admin.StackedInline):
     # Указываем обязательный атрибут - модель к которой относится данный класс
     model = ProductImg
-
     # Указжем поля отображаемые на карточке слайда
     fields = ('img_small', 'get_img_small', 'alt_small', 'img_medium', 'get_img_medium', 
         'alt_medium', 'img_big', 'get_img_big', 'alt_big')

@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+
 from appProductCategory.views import getProductsCategorys, getProductsCategorysById
-from appProductItem.views import getProdItemsByCategory, getProdItemById, getProdImagesById, getProdItemInCategorys
+from appProductItem.views import getProdItemsByCategory, getProdItemById, getProdImagesById, getProdItemInGroups
 # Create your views here.
 
 # Получаем список категорий товаров из базы данных для главного меню.
@@ -8,8 +10,8 @@ productCategoryList = getProductsCategorys()
 
 # Функции вызываемые после обработки route, в зависимости от адреса
 def index_page(request):
-    prodItemsInGroups = getProdItemInCategorys()
-    print(prodItemsInGroups)
+    # Получаем товары товары в соответствующих категориях
+    prodItemsInGroups = getProdItemInGroups()
     # Отрисовываем полученные данные на странице
     return render(request, './index.html', {
         'productCategoryList' : productCategoryList,
@@ -33,11 +35,14 @@ def product_page(request, idProductItem):
     prodItem = getProdItemById(idProductItem)
     # Получаем картинки товараов по ID товара 
     prodImages = getProdImagesById(idProductItem)
+    # Получаем абсолютный URL (http://127.0.0.1:8000/product/2/)
+    productURL = request.build_absolute_uri()
     # Отрисовываем полученные данные на странице
     return render(request, './product.html', {
         'productCategoryList' : productCategoryList,
         'prodItem' : prodItem,
         'prodImages' : prodImages,
+        'productURL': productURL,
     })
 
 def contacts_page(request):
@@ -45,3 +50,4 @@ def contacts_page(request):
     return render(request, './contacts.html', {
         'productCategoryList' : productCategoryList
     })
+

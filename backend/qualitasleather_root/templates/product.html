@@ -58,34 +58,7 @@
                 <div class="goods-specifications__split-line"></div>
                 <button data-fancybox="" data-src="#modal-window" class="main-button">Оформить заказ</button>
             </div>
-            <div id="modal-window" class="modal-window">
-                <h1 class="main-h1-title modal-window__title">Заполните форму</h1>
-                <p class="modal-window__text">Укажите детали заказа и мы свяжемся с вами в ближайшее время</p>
-                <form action="" class="modal-window__form">
-                    <ul class="modal-window__list">
-                        <li class="modal-window__list-element">
-                            <span class="modal-window__input_title">Изделие:</span>
-                            <span class="modal-window__input_title">{{prodItem.product_name}}</span>
-                            <img src="{{prodImages.0.img_small.url}}" alt="маленькое изображение черной кожанной сумки">
-                        </li>
-                        <li class="modal-window__list-element">
-                            <label class="modal-window__input_title" for="input-name">Как вас зовут:</label>
-                            <input class="modal-window__input" type="text" placeholder="Имя" id="input-name">
-                        </li>
-                        <li class="modal-window__list-element">
-                            <label class="modal-window__input_title" for="input-telephone">Контактный телефон:</label>
-                            <input class="modal-window__input type="text" placeholder="Номер телефона" id="input-telephone">
-                        </li>
-                        <li class="modal-window__list-element">
-                            <label class="modal-window__input_title" for="input-commet">Комментарий к заказу:</label>
-                            <textarea class="modal-window__input type="text" placeholder="Комментарий" id="input-commet"></textarea>
-                        </li>
-                        <li class="modal-window__list-element">
-                            <input class="main-button" type="button" value="Отправить">
-                        </li>
-                    </ul>
-                </form>
-        </div> 
+            {% include 'includes/modal-window.html' %}
         </section>     
         {% include 'includes/payment.html' %}
         {% include 'includes/delevery.html' %}

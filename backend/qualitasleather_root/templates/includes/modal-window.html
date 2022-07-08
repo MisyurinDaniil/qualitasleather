@@ -8,6 +8,8 @@
                 <li class="modal-window__list-element">
                     <span class="modal-window__input_title">Изделие:</span>
                     <span class="modal-window__input_title">{{prodItem.product_name}}</span>
+
+                    <input class="display-none" type="text" value="{{request.get_full_path}}" name="get-full-path">
                     <input class="display-none" type="text" value="{{prodItem.id}}" name="product-id">
                     <input class="display-none" type="text" value="{{prodItem.product_name}}" name="product-name">
                     <img src="{{prodImages.0.img_small.url}}" alt="маленькое изображение черной кожанной сумки">

@@ -9,22 +9,34 @@
                     <span class="modal-window__input_title">Изделие:</span>
                     <span class="modal-window__input_title">{{prodItem.product_name}}</span>
 
-                    <input class="display-none" type="text" value="{{request.get_full_path}}" name="get-full-path">
-                    <input class="display-none" type="text" value="{{prodItem.id}}" name="product-id">
-                    <input class="display-none" type="text" value="{{prodItem.product_name}}" name="product-name">
+                    <input class="display-none" type="text" value="{{request.get_full_path}}" name="get_full_path">
+                    <input class="display-none" type="text" value="{{prodItem.id}}" name="product_id">
                     <img src="{{prodImages.0.img_small.url}}" alt="маленькое изображение черной кожанной сумки">
                 </li>
-                <li class="modal-window__list-element">
+
+                <!-- <li class="modal-window__list-element">
                     <label class="modal-window__input_title" for="input-name">Как вас зовут:</label>
                     <input class="modal-window__input" type="text" placeholder="Имя" id="input-name" name="customer-name">
                 </li>
                 <li class="modal-window__list-element">
                     <label class="modal-window__input_title" for="input-telephone">Контактный телефон:</label>
-                    <input class="modal-window__input type="text" placeholder="Номер телефона" id="input-telephone" name="customer-telephone">
+                    <input class="modal-window__input" type="text" placeholder="Номер телефона" id="input-telephone" name="customer-telephone">
                 </li>
                 <li class="modal-window__list-element">
                     <label class="modal-window__input_title" for="input-commet">Комментарий к заказу:</label>
-                    <textarea class="modal-window__input type="text" placeholder="Комментарий" id="input-commet" name="customer-commet"></textarea>
+                    <textarea class="modal-window__input" type="text" placeholder="Комментарий" id="input-commet" name="customer-commet"></textarea>
+                </li> -->
+                <li class="modal-window__list-element">
+                    <label class="modal-window__input_title" for="input-name">Как вас зовут:</label>
+                    {{ formOrder.customer_name }}
+                </li>
+                <li class="modal-window__list-element">
+                    <label class="modal-window__input_title" for="input-telephone">Контактный телефон:</label>
+                    {{ formOrder.customer_telephone }}
+                </li>
+                <li class="modal-window__list-element">
+                    <label class="modal-window__input_title" for="input-commet">Комментарий к заказу:</label>
+                    {{ formOrder.customer_commet }}
                 </li>
                 <li class="modal-window__list-element">
                     <input class="main-button main-button__submit-modal" type="submit" value="Отправить">
@@ -42,4 +54,4 @@
         Приносим извинения за временные неполадки. <br> 
         Попробуйте оформить заказ подзднее или свяжитесь с нами в социальных сетях.
     </div>
-</div> 
+</div>

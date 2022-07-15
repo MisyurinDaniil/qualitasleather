@@ -3,6 +3,7 @@ from django.http import HttpResponse
 
 from appProductCategory.views import getProductsCategorys, getProductsCategorysById
 from appProductItem.views import getProdItemsByCategory, getProdItemById, getProdImagesById, getProdItemInGroups
+from appOrders.forms import OrderForm
 # Create your views here.
 
 # Получаем список категорий товаров из базы данных для главного меню.
@@ -37,12 +38,15 @@ def product_page(request, idProductItem):
     prodImages = getProdImagesById(idProductItem)
     # Получаем абсолютный URL (http://127.0.0.1:8000/product/2/)
     productURL = request.build_absolute_uri()
+    # Создаем форму для заказа
+    formOrder = OrderForm()
     # Отрисовываем полученные данные на странице
     return render(request, './product.html', {
         'productCategoryList' : productCategoryList,
         'prodItem' : prodItem,
         'prodImages' : prodImages,
         'productURL': productURL,
+        'formOrder' : formOrder,
     })
 
 def contacts_page(request):

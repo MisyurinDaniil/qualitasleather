@@ -10,19 +10,19 @@ from appTelegram.sendmessage import sendTelegram
 def makeorder(request):
     newOrder = Order()
 
-    product_id = request.POST['product-id']
-    customer_name = request.POST['customer-name']
-    customer_telephone = request.POST['customer-telephone']
-    customer_commet = request.POST['customer-commet']
+    product_id = request.POST['product_id']
+    customer_name = request.POST['customer_name']
+    customer_telephone = request.POST['customer_telephone']
+    customer_commet = request.POST['customer_commet']
     product_name = ProductItem.objects.get(pk=product_id).product_name
     server_url = request.get_host()
-    get_full_path = request.POST['get-full-path']
+    get_full_path = request.POST['get_full_path']
 
     text = ('ID товара - ' + product_id + '\n' + 
             'Ссылка на товар - ' + server_url + get_full_path + '\n' + 
             'Название товара - ' + product_name + '\n' + 
             'Имя заказчика - ' + customer_name + '\n' + 
-            'Телефон закачика - ' + customer_telephone + '\n' + 
+            'Телефон закачика - ' + customer_telephone + '\n' + '\n' +
             'Комментарий к заказу - ' + customer_commet)
 
     newOrder.order_binding = ProductItem.objects.get(pk=product_id)

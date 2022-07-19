@@ -319,16 +319,24 @@ Button our contacts
     padding-bottom: 17px;
 }
 .product-grid__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
 }
 .product {
+    max-width: calc(50% - 8px);
+    flex-grow: 1;
     list-style: none;
     background-color: #fff;
     margin-bottom: 20px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 .product__link {
     display: flex;
+    flex-direction: column;
     padding: 10px;
     text-decoration: none;
     position: relative;
@@ -340,31 +348,28 @@ Button our contacts
     text-decoration: underline;
 }
 .product__image-wraper {
-    width: 90px;
-    height: 85px;
+    /* width: 90px;
+    height: 85px; */
     overflow: hidden;
     flex-shrink: 0;
 }
 .product__img {
-    width: 90px;
-    height: 85px;
+    /* width: 90px;
+    height: 85px; */
+    width: 100%;
 }
 .product__description-wrap {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     justify-content: space-between;
     font-size: 16px;
     color: #333;
     text-transform: uppercase;
-    position: relative;
-    padding-left: 15px;
-    padding-top: 20px;
-    padding-right: 20px;
 }
 .product__title {
     margin: 0;
     line-height: 18px;
+    padding: 10px 0 10px 0;
 }
 .product__price {
     margin: 0;
@@ -380,18 +385,13 @@ Button our contacts
     text-decoration:line-through
 }
 @media (min-width: 576px) {
-    .product-grid__list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
     .product {
         display: flex;
-        width: 230px;
+        flex-grow: 0;
+        max-width: 230px;
         margin-bottom: 30px;
-    }
-    .product__link {
-        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
     }
     .product__image-wraper {
         width: 210px;
@@ -414,7 +414,7 @@ Button our contacts
 }
 @media (min-width: 992px) {
     .product {
-        width: 210px;
+        max-width: 210px;
     }
     .product__image-wraper {
         width: 190px;
@@ -427,7 +427,7 @@ Button our contacts
 }
 @media (min-width: 1200px) {
     .product {
-        width: 270px;
+        max-width: 270px;
     }
     .product__image-wraper {
         width: 250px;

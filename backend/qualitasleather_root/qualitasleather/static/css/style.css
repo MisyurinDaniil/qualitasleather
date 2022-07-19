@@ -924,7 +924,7 @@ Button our contacts
 }
 #mainCarousel {
     min-width: 200px;
-    max-width: 250px;
+    max-width: 320px;
     --carousel-button-color: #170724;
     --carousel-button-bg: #fff;
     --carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%),
@@ -961,8 +961,9 @@ Button our contacts
 }
 #thumbCarousel{
     min-width: 200px;
-    max-width: 250px;
+    max-width: 320px;
     margin-top: 10px;
+
 }
 #thumbCarousel .carousel__slide {
     opacity: 0.5;
@@ -983,13 +984,28 @@ Button our contacts
 }
 #thumbCarousel .panzoom__content {
     display: block;
-}    
+}
+.carousel__button {
+    width: var(--carousel-button-width, 35px);
+    height: var(--carousel-button-height, 35px);
+    display: none;
+}
+#thumbCarousel .carousel__slide:first-child {
+    margin-left: 0px;
+}
+#thumbCarousel .carousel__slide:last-child {
+    margin-right: 0px;
+}
 @media (min-width: 576px) {
     #mainCarousel {
         max-width: 300px;
     }
     #thumbCarousel{
         max-width: 300px;
+    }
+    .carousel__button {
+        width: var(--carousel-button-width, 48px);
+        height: var(--carousel-button-height, 48px);
     }
 }
 @media (min-width: 768px) {

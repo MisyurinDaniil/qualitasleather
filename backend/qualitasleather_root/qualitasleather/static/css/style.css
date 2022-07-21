@@ -40,8 +40,8 @@ Button our contacts
     min-width: 320px;
     margin: 0 auto;
     position: relative;
-    height: 320px;
-    background-image: url(../img/heder-bacground-320px.jpg);
+    height: 220px;
+    background-image: url(../img/heder-bacground-576x220px.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     padding-top: 0.1px;
@@ -64,7 +64,7 @@ Button our contacts
     width: 250px;
     text-align: right;
     position: absolute;
-    top: 190px;
+    top: 132px;
     right: 25px;
     font-size: 24px;
     line-height: 30px;
@@ -76,8 +76,6 @@ Button our contacts
 @media (min-width: 576px) {
     .page-header {
         width: 576px;
-        height: 280px;
-        background-image: url(../img/heder-bacground-576px.jpg);
     }
     .page-header__logo-wrap {
         width: 106px;
@@ -93,19 +91,12 @@ Button our contacts
         top: 25px;
         right: 37px;
     }
-    .page-header__titel {
-        width: 355px;
-        top: 150px;
-        right: 40px;
-        font-size: 36px;
-        line-height: 36px;
-    }
 }
 @media (min-width: 768px) {
     .page-header {
         width: 768px;
-        height: 400px;
-        background-image: url(../img/heder-bacground-768px.jpg);
+        height: 240px;
+        background-image: url(../img/heder-bacground-768x240px.jpg);
     }
     .page-header__logo-wrap {
         margin-left: 50px;
@@ -119,7 +110,7 @@ Button our contacts
     }
     .page-header__titel {
         width: 480px;
-        top: 205px;
+        top: 105px;
         right: 50px;
         font-size: 48px;
         line-height: 60px;
@@ -129,7 +120,7 @@ Button our contacts
     .page-header {
         width: 992px;
         height: 350px;
-        background-image: url(../img/heder-bacground-992px.jpg);
+        background-image: url(../img/heder-bacground-992x350px.jpg);
     }
     .page-header__our-contacts {
         width: 170px;
@@ -145,7 +136,7 @@ Button our contacts
     .page-header {
         width: 1200px;
         height: 350px;
-        background-image: url(../img/heder-bacground-1200px.jpg);
+        background-image: url(../img/heder-bacground-1200x350px.jpg);
     }
     .page-header__titel {
         width: 850px;
@@ -340,7 +331,7 @@ Button our contacts
 .product__link {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 8px;
     text-decoration: none;
     position: relative;
 }

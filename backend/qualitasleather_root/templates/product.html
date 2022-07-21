@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-    {{prodItem.product_name}}
+    qualitas.store - {{prodItem.product_name}}
 {% endblock %}
 {% block mainContent %}
     <div class="main-content">
@@ -15,14 +15,14 @@
                             data-src="{{image.img_big.url}}"
                             data-fancybox="gallery"
                         >
-                            <img src="{{image.img_medium.url}}" />
+                            <img src="{{image.img_medium.url}}" alt="{{image.alt_medium}}"/>
                         </div>
                     {% endfor %}
                 </div>
                 <div id="thumbCarousel" class="carousel">
                     {% for image in prodImages %}
                         <div class="carousel__slide">
-                            <img class="panzoom__content" src="{{image.img_small.url}}" />
+                            <img class="panzoom__content" src="{{image.img_small.url}}" alt="{{image.alt_small}}"/>
                         </div>
                     {% endfor %}
 

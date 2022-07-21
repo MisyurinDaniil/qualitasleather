@@ -84,11 +84,11 @@ class ProductImg(models.Model):
     # Связываем таблицы через тип поля ForeignKey
     # on_delete=models.CASCADE - при удалении родителя (товара) удалиться связанная с ним таблица (картинки)
     img_binding = models.ForeignKey(ProductItem, on_delete=models.CASCADE, verbose_name='Товар')
-    img_small = models.ImageField(upload_to='product_img/', verbose_name='Маленькая картинка 100х100')
+    img_small = models.ImageField(upload_to='product_img/', verbose_name='Маленькая картинка 96х64')
     alt_small = models.CharField(max_length=200, verbose_name='Альтернативный текст маленькой картинки')
     img_medium = models.ImageField(upload_to='product_img/', verbose_name='Средняя картинка 330х330')
     alt_medium = models.CharField(max_length=200, verbose_name='Альтернативный текст средней картинки')
-    img_big = models.ImageField(upload_to='product_img/', verbose_name='Большая картинка')
+    img_big = models.ImageField(upload_to='product_img/', verbose_name='Большая картинка 1680х945')
     alt_big = models.CharField(max_length=200, verbose_name='Альтернативный текст большой картинки')
 
     def __str__(self):

@@ -3,6 +3,7 @@ backend/venv/
 __pycache__/
 telegram_token.txt
 telegramToken.py
+db.sqlite3
 # .idea/
 
 # # Created by https://www.gitignore.io/api/macos,linux,django,python,pycharm
